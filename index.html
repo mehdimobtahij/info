@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehdi Mobtahij - Alternant Comptable & Audit</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,271 +14,157 @@
         }
 
         body {
-            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
-            color: #2c3e50;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .floating-orb {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(52, 73, 94, 0.05), transparent);
-            animation: float 12s ease-in-out infinite;
-        }
-
-        .orb-1 {
-            width: 300px;
-            height: 300px;
-            top: 10%;
-            right: 20%;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 200px;
-            height: 200px;
-            bottom: 20%;
-            left: 10%;
-            animation-delay: -4s;
-        }
-
-        .orb-3 {
-            width: 150px;
-            height: 150px;
-            top: 60%;
-            right: 10%;
-            animation-delay: -8s;
+            padding: 2rem;
         }
 
         .container {
-            text-align: justify;
-            max-width: 800px;
-            padding: 3rem 2rem;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(52, 73, 94, 0.1);
-            box-shadow: 0 20px 40px rgba(52, 73, 94, 0.08);
-            animation: slideInUp 1s ease-out;
-        }
-
-        .name {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
-            letter-spacing: 2px;
-        }
-
-        .title {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            color: #5d6d7e;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .description {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    color: #2c3e50; /* Couleur foncée et lisible */
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    line-height: 1.8;
-    animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .name, .title, .mobility {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 3rem;
             text-align: center;
         }
 
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+        }
+
         .mobility {
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
-            color: #ffa500;
+            font-size: 1rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
             font-style: italic;
-            margin-bottom: 3rem;
-            animation: fadeInUp 1s ease-out 0.8s both;
         }
 
         .contact-section {
-            margin-bottom: 3rem;
-            animation: fadeInUp 1s ease-out 1s both;
+            margin-bottom: 2.5rem;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.6);
+            background: #f1f5f9;
             padding: 1.5rem;
-            border-radius: 15px;
-            border: 1px solid rgba(52, 73, 94, 0.1);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            transition: all 0.2s ease;
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.8);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(52, 73, 94, 0.15);
+            background: #e2e8f0;
+            transform: translateY(-1px);
         }
 
         .contact-item i {
-            color: #5d6d7e;
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            min-width: 30px;
+            color: #2563eb;
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+            width: 24px;
+            text-align: center;
         }
 
         .contact-item span {
-            color: rgba(44, 62, 80, 0.9);
-            font-weight: 400;
+            color: #334155;
+            font-weight: 500;
         }
 
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            animation: fadeInUp 1s ease-out 1.2s both;
+            gap: 1.5rem;
         }
 
         .download-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            min-width: 200px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: white !important;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            min-width: 180px;
         }
 
         .cv-btn {
-            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            background: #2563eb;
             color: white;
-            border: 2px solid transparent;
-            box-shadow: 0 10px 30px rgba(52, 73, 94, 0.2);
         }
 
         .cv-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(52, 73, 94, 0.3);
-            background: linear-gradient(135deg, #3e5267 0%, #34495e 100%);
+            background: #1d4ed8;
+            transform: translateY(-1px);
         }
 
         .calendar-btn {
-            background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+            background: #059669;
             color: white;
-            border: 2px solid transparent;
-            box-shadow: 0 10px 30px rgba(127, 140, 141, 0.2);
         }
 
         .calendar-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(127, 140, 141, 0.3);
-            background: linear-gradient(135deg, #8d9ca0 0%, #a3b3b6 100%);
+            background: #047857;
+            transform: translateY(-1px);
         }
 
         .download-btn i {
-            margin-left: 0.8rem;
-            font-size: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .download-btn:hover i {
-            transform: translateX(3px);
-        }
-
-        .download-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .download-btn:hover::before {
-            left: 100%;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
-                opacity: 0.3;
-            }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-                opacity: 0.6;
-            }
+            margin-left: 0.5rem;
+            font-size: 0.875rem;
         }
 
         @media (max-width: 768px) {
             .container {
                 padding: 2rem 1.5rem;
                 margin: 1rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.125rem;
             }
 
             .contact-grid {
@@ -289,50 +175,16 @@
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
-                gap: 1.5rem;
             }
 
             .download-btn {
                 width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        /* Effet de particules */
-        .particles {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(52, 73, 94, 0.3);
-            border-radius: 50%;
-            animation: particles 15s linear infinite;
-        }
-
-        @keyframes particles {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
+                max-width: 280px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background-animation">
-        <div class="floating-orb orb-1"></div>
-        <div class="floating-orb orb-2"></div>
-        <div class="floating-orb orb-3"></div>
-    </div>
-
     <div class="container">
         <h1 class="name">Mehdi Mobtahij</h1>
         <p class="title">Alternant Comptable, Audit et Expertise Comptable</p>
@@ -351,7 +203,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+33 7 56 75 67 52</span>
+                    <span>07 54 83 39 39</span>
                 </div>
             </div>
         </div>
@@ -368,55 +220,5 @@
             </a>
         </div>
     </div>
-
-    <script>
-        // Création de particules flottantes
-        function createParticles() {
-            const particleCount = 15;
-            
-            for (let i = 0; i < particleCount; i++) {
-                setTimeout(() => {
-                    const particle = document.createElement('div');
-                    particle.className = 'particles';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 15 + 's';
-                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                    
-                    document.querySelector('.background-animation').appendChild(particle);
-                    
-                    setTimeout(() => {
-                        particle.remove();
-                    }, 25000);
-                }, i * 1000);
-            }
-        }
-
-        // Lancer les particules au chargement
-        createParticles();
-        
-        // Relancer les particules périodiquement
-        setInterval(createParticles, 15000);
-
-        // Effet de hover amélioré pour les boutons
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.05)';
-            });
-            
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Animation au scroll (si on ajoute du contenu plus tard)
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            
-            document.querySelectorAll('.floating-orb').forEach((orb, index) => {
-                orb.style.transform = `translateY(${parallax * (index + 1) * 0.1}px)`;
-            });
-        });
-    </script>
 </body>
 </html>
